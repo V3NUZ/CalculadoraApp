@@ -1,3 +1,4 @@
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
 public class CalculadoraApp {
@@ -14,5 +15,6 @@ public class CalculadoraApp {
         var resultado = operando1 + operando2;
         System.out.println("El resultado es: " + resultado);
 
+        System.out.println();
     }
 }
