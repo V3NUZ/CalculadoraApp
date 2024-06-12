@@ -13,15 +13,36 @@ public class CalculadoraApp {
                 3. Multiplicacion
                 4. Division
                 """);
+        System.out.printf("Operacion a realizar: ");
+        var operacion = Integer.parseInt(consola.nextLine());
+
+        //Operaciones
+        if (operacion >= 1 && operacion <= 4) {
+            System.out.print("Proporciona el primero valor: ");
+            var operando1 = Integer.parseInt(consola.nextLine());
+            System.out.print("Proporciona el segundo valor: ");
+            var operando2 = Integer.parseInt(consola.nextLine());
+
+            int resultado;
+            switch (operacion){
+                case 1:
+                    resultado = operando1 + operando2;
+                    System.out.println("El resultado de la suma es: " + resultado);
+                case 2:
+                    resultado = operando1 - operando2;
+                    System.out.println("El resultado de la resta es: " + resultado);
+                case 3:
+                    resultado = operando1 * operando2;
+                    System.out.println("El resultado de la multiplicacion es: " + resultado);
+                case 4:
+                    resultado = operando1 / operando2;
+                    System.out.println("El resultado de la division es: " + resultado);
+            }
+
+        }
 
 
-        System.out.print("Proporciona el primero valor: ");
-        var operando1 = Integer.parseInt(consola.nextLine());
-        System.out.print("Proporciona el segundo valor: ");
-        var operando2 = Integer.parseInt(consola.nextLine());
 
-        var resultado = operando1 + operando2;
-        System.out.println("El resultado es: " + resultado);
 
         System.out.println();
     }
