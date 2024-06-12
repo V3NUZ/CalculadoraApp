@@ -6,6 +6,14 @@ public class CalculadoraApp {
         Scanner consola = new Scanner(System.in);
 
         System.out.println("**** Aplicacion Calculadora ****");
+        //Mostrar el menu
+        System.out.println("""
+                1. Suma
+                2. Resta
+                3. Multiplicacion
+                4. Division
+                """);
+
 
         System.out.print("Proporciona el primero valor: ");
         var operando1 = Integer.parseInt(consola.nextLine());
