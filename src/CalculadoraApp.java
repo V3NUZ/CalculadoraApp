@@ -20,6 +20,7 @@ public class CalculadoraApp {
         if (operacion >= 1 && operacion <= 4) {
             System.out.print("Proporciona el primero valor: ");
             var operando1 = Integer.parseInt(consola.nextLine());
+
             System.out.print("Proporciona el segundo valor: ");
             var operando2 = Integer.parseInt(consola.nextLine());
 
@@ -38,12 +39,6 @@ public class CalculadoraApp {
                     resultado = operando1 / operando2;
                     System.out.println("El resultado de la division es: " + resultado);
             }
-
         }
-
-
-
-
-        System.out.println();
     }
 }
