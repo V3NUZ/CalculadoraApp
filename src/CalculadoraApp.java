@@ -8,49 +8,14 @@ public class CalculadoraApp {
 
             System.out.println("**** Aplicacion Calculadora ****");
             //Mostrar el menu
-            System.out.println("""
-                    1 - Suma
-                    2 - Resta
-                    3 - Multiplicacion
-                    4 - Division
-                    5 - Salir
-                    """);
-            System.out.print("Operacion a realizar: ");
+            mostrarMenu();
 
             try {
                 var operacion = Integer.parseInt(consola.nextLine());
                 //Operaciones
                 if (operacion >= 1 && operacion <= 4) {
-                    System.out.print("Proporciona el primero valor: ");
-                    var operando1 = Integer.parseInt(consola.nextLine());
-
-                    System.out.print("Proporciona el segundo valor: ");
-                    var operando2 = Integer.parseInt(consola.nextLine());
-
-                    int resultado = 0;
-
-                    switch (operacion) {
-                        case 1: { // Suma
-                            resultado = operando1 + operando2;
-                            System.out.println("El resultado de la suma es: " + resultado);
-                            break;
-                        }
-                        case 2: { // Resta
-                            resultado = operando1 - operando2;
-                            System.out.println("El resultado de la resta es: " + resultado);
-                            break;
-                        }
-                        case 3: { // Multiplicacion
-                            resultado = operando1 * operando2;
-                            System.out.println("El resultado de la multiplicacion es: " + resultado);
-                            break;
-                        }
-                        case 4: { // Division
-                            resultado = operando1 / operando2;
-                            System.out.println("El resultado de la division es: " + resultado);
-                            break;
-                        }
-                    }
+                    // Ejecutar la operacion
+                    ejecutarOperacion(operacion, consola);
                 } else if (operacion == 5) { // salir
                     System.out.println("Hasta pronto...");
                     break;
@@ -65,6 +30,52 @@ public class CalculadoraApp {
             } // Fin Catch
         } // Fin While
     } // Fin Main
+
+    private static void mostrarMenu() {
+        System.out.println("""
+                1 - Suma
+                2 - Resta
+                3 - Multiplicacion
+                4 - Division
+                5 - Salir
+                """);
+        System.out.print("Operacion a realizar: ");
+
+    }
+
+    private static void ejecutarOperacion(int operacion, Scanner consola) {
+        System.out.print("Proporciona el primero valor: ");
+        double operando1 = Double.parseDouble(consola.nextLine());
+
+        System.out.print("Proporciona el segundo valor: ");
+        double operando2 = Double.parseDouble(consola.nextLine());
+
+       double resultado = 0;
+
+        switch (operacion) {
+            case 1: { // Suma
+                resultado = operando1 + operando2;
+                System.out.println("El resultado de la suma es: " + resultado);
+                break;
+            }
+            case 2: { // Resta
+                resultado = operando1 - operando2;
+                System.out.println("El resultado de la resta es: " + resultado);
+                break;
+            }
+            case 3: { // Multiplicacion
+                resultado = operando1 * operando2;
+                System.out.println("El resultado de la multiplicacion es: " + resultado);
+                break;
+            }
+            case 4: { // Division
+                resultado = operando1 / operando2;
+                System.out.println("El resultado de la division es: " + resultado);
+                break;
+            }
+        }
+    }
+
 } //Fin Class
 
 
